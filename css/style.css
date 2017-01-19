@@ -59,3 +59,39 @@ body {
   background: url(/farm/img/Background%20Slider.png) no-repeat center center;
   background-size: cover;
 }
+.container-price {
+  width: 100%;
+  background: #d8d452;
+  height: 100px;
+}
+.container-price .block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.container-price .block img {
+  display: inline-block;
+}
+.container-price .block .arrow {
+  margin-left: 15px;
+}
+.container-price .block .text_price_fregat {
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  top: 30px;
+  left: 5px;
+  font-size: 22px;
+}
+.container-price .block .text_price_lobster {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 30px;
+  color: #552404;
+}
