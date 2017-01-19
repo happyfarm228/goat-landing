@@ -1,3 +1,4 @@
+@import "fonts.css";
 @color-green: #80a71d; // переменная для объектов зеленого цвета
 @color-yellow: #d8d452; // переменная для объектов желтого цвета
 @color-tel: #8b8b8b; // цвет телефона 
@@ -18,6 +19,10 @@
 @fontsize-chooseLitr: 24px; // размер шрифта на элементах выбора количества молока
 @fontsize-remark: 16px; // размер шрифта примечания
 @fontsize-developers: 12px;
+@fontLobster: "Lobster",
+cursive;
+@fontFregat: "Fregat",
+arial;
 .clearfix() {
     &:before,
     &:after {
@@ -33,6 +38,10 @@
 @leftright: 20px) {
     padding: @topbottom @leftright;
     text-transform: uppercase;
+    border-radius: 5px;
+    font-size: @fontsize-buttons;
+    color: #fff;
+    font-family: @fontFregat;
 }
 
 //==========end of attributes============\\
@@ -75,16 +84,18 @@ body {
                 a {
                     color: #fff;
                     font-size: @fontsize-major;
-                    &:hover, &:focus {
+                    font-family: @fontFregat;
+                    &:hover,
+                    &:focus {
                         background-color: transparent!important;
                     }
-                }   
+                }
                 a.btn-call {
                     .button-paddings();
                     background-color: @color-yellow;
-                    text-transform: uppercase;
-                    border-radius: 5px;
-                    &:hover, &:focus {
+                    font-weight: bold;
+                    &:hover,
+                    &:focus {
                         background-color: @color-yellow!important;
                     }
                 }
@@ -95,22 +106,57 @@ body {
 
 .container-banner {
     width: 100%;
-    background: url(/farm/img/Background%20Slider.png) no-repeat center center;
-    background-size: cover;
+    height: 520px;
+    background: url("../img/BackgroundSlider.png") no-repeat center center;
+    overflow: hidden;
+    .container {
+        align-items: center;
+        justify-content: center;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        height: 100%;
+        position: relative;
+        .mainTitle {
+            text-align: center;
+            margin-top: -100px;
+            h1,
+            h2 {
+                color: @color-mainTitle;
+                font-family: @fontLobster;
+            }
+            h1 {
+                font-size: @fontsize-mainTitle;
+                margin: 0;
+            }
+            h2 {
+                font-size: @fontsize-textTitle;
+                margin: 0;
+            }
+            a.order {
+                .button-paddings(@leftright: 0);
+                width: 150px;
+                background-color: @color-yellow;
+                display: inline-block;
+                margin-top: 30px;
+                margin-right: 15px;
+            }
+            a.more {
+                .button-paddings(13px,
+                0);
+                display: inline-block;
+                width: 150px;
+                background-color: transparent;
+                border: 2px solid #fff;
+                margin-left: 15px;
+            }
+        }
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
