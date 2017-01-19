@@ -55,3 +55,7 @@ body {
 .container-menu nav ul li a.btn-call:focus {
   background-color: #d8d452 !important;
 }
+.container-banner {
+  width: 100%;
+  background: url(/farm/img/);
+}
