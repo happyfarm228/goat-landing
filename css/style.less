@@ -3,7 +3,6 @@
 @color-yellow: #d8d452; // переменная для объектов желтого цвета
 @color-tel: #8b8b8b; // цвет телефона 
 @color-mainTitle: #552404; // цвет основного заголвка
-@color-deliveryPrice: #552404; // цвет панели доставки
 @color-headings: #2b2b2b; // цвет ВСЕХ заголовков
 @color-text: #555; // цвет текста
 @color-sliderElements: #a2a2a2; // цвет элемента слайдера
@@ -69,6 +68,7 @@ body {
     width: 100%;
     height: 90px;
     background-color: @color-green;
+    z-index: 9999;
     .navbar-brand {
         float: left;
         img {
@@ -108,7 +108,9 @@ body {
     width: 100%;
     height: 520px;
     background: url("../img/BackgroundSlider.png") no-repeat center center;
+    background-size: cover;
     overflow: hidden;
+    position: relative;
     .container {
         align-items: center;
         justify-content: center;
@@ -118,10 +120,10 @@ body {
         display: -o-flex;
         display: flex;
         height: 100%;
-        position: relative;
         .mainTitle {
             text-align: center;
             margin-top: -100px;
+            z-index: 101;
             h1,
             h2 {
                 color: @color-mainTitle;
@@ -153,10 +155,52 @@ body {
                 margin-left: 15px;
             }
         }
-        img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+    }
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+    }
+}
+
+.container-price {
+    width: 100%;
+    background: @color-yellow;
+    height: 100px;
+    .container {
+        display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        .block {
+            display: table;
+            img {
+                display: inline-block;
+            }
+            .arrow {
+                margin-left: 15px;
+            }
+            .text_price_fregat {
+                display: inline-block;
+                color: #fff;
+                position: relative;
+                top: 30px;
+                left: 5px;
+                font-size: 22px;
+            }
+            .text_price_lobster {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+                font-size: @fontsize-headings;
+                color: @color-mainTitle;
+                font-family: @fontLobster;
+            }
         }
     }
 }
