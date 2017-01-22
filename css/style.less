@@ -339,20 +339,55 @@
         height: 500px;
         background: url(/img/PatternCertificates.jpg);
         text-align: center;
-            h1 {
-                background: #fff; 
-                font-size: 24px;
-                font-weight: bold;
-                padding-left: 25px;
-                padding-right: 25px;
-                padding-bottom: 10px;
-                padding-top: 10px;
-                display: inline-block;
-                margin-top: 35px;
-                margin-bottom: 35px;
+        h1 {
+            background: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            display: inline-block;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+    }
+    
+    .container-footer {
+        width: 100%;
+        min-height: 125px;
+        background: @color-green;
+        font-weight: bold;
+        color: #fff;
+        .logo-footer {
+            img {
+                float: left;
+                margin-top: 20px;
             }
         }
-        .col-md-4 {
-            .centering();
+        .social-footer {
+            text-align: center;
+            margin-top: 20px;
         }
-    
+        .links-footer {
+            text-align: right;
+            span {
+                color: @color-text;
+            }
+            p {
+                font-size: 12px;
+                a {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            ul {
+                list-style: none;
+                margin-top: 20px;
+                margin-bottom: 0px;
+            }
+        }
+    }

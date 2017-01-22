@@ -341,13 +341,39 @@ body {
   margin-top: 35px;
   margin-bottom: 35px;
 }
-.col-md-4 {
-  height: 100%;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container-footer {
+  width: 100%;
+  min-height: 125px;
+  background: #80a71d;
+  font-weight: bold;
+  color: #fff;
+}
+.container-footer .logo-footer img {
+  float: left;
+  margin-top: 20px;
+}
+.container-footer .social-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.container-footer .links-footer {
+  text-align: right;
+}
+.container-footer .links-footer span {
+  color: #555555;
+}
+.container-footer .links-footer p {
+  font-size: 12px;
+}
+.container-footer .links-footer p a {
+  border-bottom: 1px solid #fff;
+}
+.container-footer .links-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.container-footer .links-footer ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
