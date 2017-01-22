@@ -1,4 +1,4 @@
-    @import "fonts.css";
+@import "fonts.css";
 @color-green: #80a71d; // переменная для объектов зеленого цвета
 @color-yellow: #d8d452; // переменная для объектов желтого цвета
 @color-tel: #8b8b8b; // цвет телефона 
@@ -15,7 +15,7 @@
 @fontsize-deliveryPrice: 30px; // размер шрифта панели доставки
 @fontsize-headings: 30px; // размер шрифта ВСЕХ заголовков
 @fontsize-certificate: 24px; // размер шрифта сертификата 
-@fontsize-chooseLitr: 24px; // размер шрифта на элементах выбора количества молока
+@fontsize-chooseLitr: 20px; // размер шрифта на элементах выбора количества молока
 @fontsize-remark: 16px; // размер шрифта примечания
 @fontsize-developers: 12px;
 @fontLobster: "Lobster",
@@ -53,6 +53,7 @@ arial;
     align-items: center;
     justify-content: center;
 }
+
 
 //==========end of attributes============\\
 html,
@@ -279,56 +280,144 @@ body {
         }
     }
 }
-    .container-slider {
-        width: 100%;
-        height: 500px;
-        background: url(../img/PatternPaper.png) repeat;
-        .slider-wrapper {
-            .centering();
-            padding: 50px 0;
-            .img-wrapper {
-                background: #fff;
-                padding: 30px;
-                overflow: hidden;
-                float: left;
-                height: 400px;
-                width: 400px;
-                box-sizing: border-box;
-                img {
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
-            .text-wrapper {
-                text-align: left;
-                float: right;
-                width: 330px;
-                h1 {
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: @fontsize-headings;
-                    color: @color-headings;
-                    margin-bottom: 20px;
-                }
+
+.container-slider {
+    width: 100%;
+    height: 500px;
+    background: url(../img/PatternPaper.png) repeat;
+    .slider-wrapper {
+        .centering();
+        padding: 50px 0;
+        .img-wrapper {
+            background: #fff;
+            padding: 30px;
+            overflow: hidden;
+            float: left;
+            height: 400px;
+            width: 400px;
+            box-sizing: border-box;
+            img {
+                max-width: 100%;
+                height: auto;
             }
         }
-        ol.carousel-indicators {
-            bottom: 0;
-            li {
-                background: #fff;
-            }
-            li.active {
-                background: @color-sliderElements;
-            }
-        }
-        .carousel-control {
-            background: transparent!important;
-            width: 10%;
-            .centering();
-            i {
-                color: @color-sliderElements;
-                text-shadow: none;
-                font-size: 30px;
+        .text-wrapper {
+            text-align: left;
+            float: right;
+            width: 330px;
+            h1 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: @fontsize-headings;
+                color: @color-headings;
+                margin-bottom: 20px;
             }
         }
     }
+    ol.carousel-indicators {
+        bottom: 0;
+        li {
+            background: #fff;
+        }
+        li.active {
+            background: @color-sliderElements;
+        }
+    }
+    .carousel-control {
+        background: transparent!important;
+        width: 10%;
+        .centering();
+        i {
+            color: @color-sliderElements;
+            text-shadow: none;
+            font-size: 30px;
+        }
+    }
+}
+
+.container-form {
+    width: 100%;
+    min-height: 500px;
+    background: @color-yellow;
+    font-size: @fontsize-chooseLitr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .select {
+        .centering();
+        img.bottle {
+            margin-right: 25px;
+        }
+        input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border: 0;
+            box-shadow: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        span.litr {
+            margin-right: 30px;
+        }
+        img.arrow {
+            transform: scale(-1, 1);
+            margin-bottom: 30px;
+            margin-right: 10px;
+        }
+        span.choose {
+            font-family: @fontLobster;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+    }
+    .wrapper-form {
+        .centering();
+        padding-top: 50px;
+        .forma {
+            width: 670px;
+            color: #fff;
+            input, textarea {
+                width: 100%;
+                background-color: transparent;
+                border: 0;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                padding: 3px 1px;
+                margin-bottom: 20px;
+                &::-webkit-input-placeholder {
+                    color: #fff;
+                }
+                &::-moz-placeholder {
+                    color: #fff;
+                }
+                &:-moz-placeholder {
+                    color: #fff;
+                }
+                &:-ms-input-placeholder {
+                    color: #fff;
+                }
+            }
+            textarea {
+                resize: vertical;
+            }
+            button {
+                .button-paddings(13px,
+                0);
+                display: inline-block;
+                width: 150px;
+                background-color: transparent;
+                border: 2px solid #fff;
+                float: right;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .note {
+        text-align: center;
+        color: #fff;
+        font-size: @fontsize-remark;
+        span {
+            color: #ff7200;
+        }
+    }
+}
