@@ -1,357 +1,428 @@
-    @import "fonts.css";
-    @color-green: #80a71d; // переменная для объектов зеленого цвета
-    @color-yellow: #d8d452; // переменная для объектов желтого цвета
-    @color-tel: #8b8b8b; // цвет телефона 
-    @color-mainTitle: #552404; // цвет основного заголвка
-    @color-headings: #2b2b2b; // цвет ВСЕХ заголовков
-    @color-text: #555; // цвет текста
-    @color-sliderElements: #a2a2a2; // цвет элемента слайдера
-    @color-borderWhyUs: #d8d452; // цвет блока "Почему мы?"
-    @color-successfullOrder: #a57d63; // цвет текста PopUp
-    @fontsize-major: 18px; // основной размер шрифта всего лендоса
-    @fontsize-buttons: 20px; // размер шрифта кнопок
-    @fontsize-mainTitle: 80px; // размер шрифта главного заголовка
-    @fontsize-textTitle: 36px; // размер слогана
-    @fontsize-deliveryPrice: 30px; // размер шрифта панели доставки
-    @fontsize-headings: 30px; // размер шрифта ВСЕХ заголовков
-    @fontsize-certificate: 24px; // размер шрифта сертификата 
-    @fontsize-chooseLitr: 24px; // размер шрифта на элементах выбора количества молока
-    @fontsize-remark: 16px; // размер шрифта примечания
-    @fontsize-developers: 12px;
-    @fontLobster: "Lobster",
-    cursive;
-    @fontFregat: "Fregat",
-    arial;
-    .clearfix() {
-        &:before,
-        &:after {
-            display: table;
-            content: "";
-        }
-        &:after {
-            clear: both;
-        }
+@import "fonts.css";
+@color-green: #80a71d; // переменная для объектов зеленого цвета
+@color-yellow: #d8d452; // переменная для объектов желтого цвета
+@color-tel: #8b8b8b; // цвет телефона 
+@color-mainTitle: #552404; // цвет основного заголвка
+@color-headings: #2b2b2b; // цвет ВСЕХ заголовков
+@color-text: #555; // цвет текста
+@color-sliderElements: #a2a2a2; // цвет элемента слайдера
+@color-borderWhyUs: #d8d452; // цвет блока "Почему мы?"
+@color-successfullOrder: #a57d63; // цвет текста PopUp
+@fontsize-major: 18px; // основной размер шрифта всего лендоса
+@fontsize-buttons: 20px; // размер шрифта кнопок
+@fontsize-mainTitle: 80px; // размер шрифта главного заголовка
+@fontsize-textTitle: 36px; // размер слогана
+@fontsize-deliveryPrice: 30px; // размер шрифта панели доставки
+@fontsize-headings: 30px; // размер шрифта ВСЕХ заголовков
+@fontsize-certificate: 24px; // размер шрифта сертификата 
+@fontsize-chooseLitr: 20px; // размер шрифта на элементах выбора количества молока
+@fontsize-remark: 16px; // размер шрифта примечания
+@fontsize-developers: 12px;
+@fontLobster: "Lobster",
+cursive;
+@fontFregat: "Fregat",
+arial;
+.clearfix() {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
     }
-    
-    .button-paddings(@topbottom: 15px;
-    @leftright: 20px) {
-        padding: @topbottom @leftright;
-        text-transform: uppercase;
-        border-radius: 5px;
-        font-size: @fontsize-buttons;
-        color: #fff;
-        font-family: @fontFregat;
+}
+
+.button-paddings(@topbottom: 15px;
+@leftright: 20px) {
+    padding: @topbottom @leftright;
+    text-transform: uppercase;
+    border-radius: 5px;
+    font-size: @fontsize-buttons;
+    color: #fff;
+    font-family: @fontFregat;
+}
+
+.centering() {
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//==========end of attributes============\\
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: @fontsize-major;
+    font-family: @fontFregat;
+    color: @color-text;
+}
+
+.container-tel {
+    width: 100%;
+    min-height: 45px;
+    background-color: #fff;
+    line-height: 45px;
+    text-align: left;
+    color: @color-tel;
+    a {
+        color: @color-tel;
+        text-decoration: none;
+        float: right;
     }
-    
-    .centering() {
-        height: 100%;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    //==========end of attributes============\\
-    html,
-    body {
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        font-size: @fontsize-major;
-        font-family: @fontFregat;
-        color: @color-text;
-    }
-    
-    .container-tel {
-        width: 100%;
-        height: 45px;
-        background-color: #fff;
-        text-align: right;
-        line-height: 45px;
-        a {
-            color: @color-tel;
-            text-decoration: none;
-        }
-    }
-    
-    .container-menu {
-        width: 100%;
-        height: 90px;
-        background-color: @color-green;
-        .navbar-brand {
-            float: left;
-            img {
-                margin-top: -7px;
-            }
-        }
-        nav {
-            padding: 0;
-            ul {
-                margin: 20px 0;
-                li {
-                    margin-left: 20px;
-                    a {
-                        color: #fff;
-                        &:hover,
-                        &:focus {
-                            background-color: transparent!important;
-                        }
-                    }
-                    a.btn-call {
-                        .button-paddings();
-                        background-color: @color-yellow;
-                        font-weight: bold;
-                        &:hover,
-                        &:focus {
-                            background-color: @color-yellow!important;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    .affix {
-        top: 0;
-        z-index: 9999;
-        min-height: 90px !important;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
-    }
-    
-    .container-banner {
-        width: 100%;
-        height: 520px;
-        background: url("../img/Banner.png") no-repeat center center;
-        background-size: cover;
-        overflow: hidden;
-        position: relative;
-        .container {
-            .centering();
-            .mainTitle {
-                text-align: center;
-                margin-top: -100px;
-                z-index: 101;
-                h1,
-                h2 {
-                    color: @color-mainTitle;
-                    font-family: @fontLobster;
-                }
-                h1 {
-                    font-size: @fontsize-mainTitle;
-                    margin: 0;
-                }
-                h2 {
-                    font-size: @fontsize-textTitle;
-                    margin: 0;
-                }
-                a.order {
-                    .button-paddings(@leftright: 0);
-                    width: 150px;
-                    background-color: @color-yellow;
-                    display: inline-block;
-                    margin-top: 30px;
-                    margin-right: 15px;
-                }
-                a.more {
-                    .button-paddings(13px,
-                    0);
-                    display: inline-block;
-                    width: 150px;
-                    background-color: transparent;
-                    border: 2px solid #fff;
-                    margin-left: 15px;
-                }
-            }
-        }
+}
+
+.container-menu {
+    width: 100%;
+    min-height: 90px;
+    background-color: @color-green;
+    .navbar-brand {
+        float: left;
         img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 99;
+            margin-top: -7px;
         }
     }
-    
-    .container-price {
-        width: 100%;
-        background: @color-yellow;
-        height: 100px;
-        .container {
-            .centering();
-            .block {
-                display: table;
-                img {
-                    display: inline-block;
-                }
-                .arrow {
-                    margin-left: 15px;
-                }
-                .text_price_fregat {
-                    display: inline-block;
-                    color: #fff;
-                    position: relative;
-                    top: 30px;
-                    left: 5px;
-                    font-size: 22px;
-                }
-                .text_price_lobster {
-                    display: inline-block;
-                    vertical-align: middle;
-                    margin-left: 10px;
-                    font-size: @fontsize-headings;
-                    color: @color-mainTitle;
-                    font-family: @fontLobster;
-                }
-            }
-        }
-    }
-    
-    .container-aboutus {
-        width: 100%;
-        height: 590px;
-        position: relative;
-        .container {
-            .centering();
-            .aboutusText {
-                display: table;
-                width: 750px;
-                text-align: center;
-                z-index: 101;
-                h1 {
-                    color: @color-headings;
-                    font-size: @fontsize-headings;
-                    font-weight: bold;
-                    margin-bottom: 30px;
-                }
-            }
-        }
-        img {
-            position: absolute;
-            bottom: 0;
-            z-index: 99;
-        }
-        img.jug {
-            left: 0;
-        }
-        img.goat {
-            right: 0;
-        }
-    }
-    
-    .container-WhyUs {
-        width: 100%;
-        height: 590px;
-        background: url(../img/backgroundWhyUs.jpg) no-repeat center;
-        background-size: cover;
-        .wrapper-WhyUs {
-            background-color: rgba(255, 255, 255, 0.3);
-            width: 100%;
-            height: 100%;
-            .container {
-                .centering();
-                .WhyUs-text {
-                    background: #fff;
-                    outline: 3px solid @color-yellow;
-                    outline-offset: -10px;
-                    padding: 50px;
-                    z-index: 100;
-                    position: relative;
-                    left: 85px;
-                    h1 {
-                        font-family: @fontLobster;
-                        text-transform: uppercase;
-                    }
-                    p {
-                        font-weight: bold;
-                        color: @color-text;
-                    }
-                }
-                .bootle-img {
-                    img {
-                        z-index: 0;
-                        display: block;
-                        position: relative;
-                        right: 105px;
-                    }
-                }
-            }
-        }
-    }
-    
-    .container-slider {
-        width: 100%;
-        height: 500px;
-        background: url(../img/PatternPaper.png) repeat;
-        .slider-wrapper {
-            .centering();
-            padding: 50px 0;
-            .img-wrapper {
-                background: #fff;
-                padding: 30px;
-                overflow: hidden;
-                float: left;
-                height: 400px;
-                width: 400px;
-                box-sizing: border-box;
-                img {
-                    max-width: 100%;
-                    height: auto;
-                }
-            }
-            .text-wrapper {
-                text-align: left;
-                float: right;
-                width: 330px;
-                h1 {
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: @fontsize-headings;
-                    color: @color-headings;
-                    margin-bottom: 20px;
-                }
-            }
-        }
-        ol.carousel-indicators {
-            bottom: 0;
+    nav {
+        padding: 0;
+        ul {
+            margin: 20px 0;
             li {
-                background: #fff;
-            }
-            li.active {
-                background: @color-sliderElements;
-            }
-        }
-        .carousel-control {
-            background: transparent!important;
-            width: 10%;
-            .centering();
-            i {
-                color: @color-sliderElements;
-                text-shadow: none;
-                font-size: 30px;
+                margin-left: 20px;
+                a {
+                    color: #fff;
+                    font-weight: bold;
+                    &:hover,
+                    &:focus {
+                        background-color: transparent!important;
+                    }
+                }
+                a.btn-call {
+                    .button-paddings();
+                    background-color: @color-yellow;
+                    &:hover,
+                    &:focus {
+                        background-color: @color-yellow!important;
+                    }
+                }
             }
         }
     }
-    
-    .container-certificates {
+}
+
+.affix {
+    top: 0;
+    z-index: 9999;
+    min-height: 90px !important;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.container-banner {
+    width: 100%;
+    height: 520px;
+    background: url("../img/Banner.png") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    .container {
+        .centering();
+        .mainTitle {
+            text-align: center;
+            margin-top: -100px;
+            z-index: 101;
+            h1,
+            h2 {
+                color: @color-mainTitle;
+                font-family: @fontLobster;
+            }
+            h1 {
+                font-size: @fontsize-mainTitle;
+                margin: 0;
+            }
+            h2 {
+                font-size: @fontsize-textTitle;
+                margin: 0;
+            }
+            a.order {
+                .button-paddings(@leftright: 0);
+                width: 150px;
+                background-color: @color-yellow;
+                display: inline-block;
+                margin-top: 30px;
+                margin-right: 15px;
+            }
+            a.more {
+                .button-paddings(13px,
+                0);
+                display: inline-block;
+                width: 150px;
+                background-color: transparent;
+                border: 2px solid #fff;
+                margin-left: 15px;
+            }
+        }
+    }
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 99;
+    }
+}
+
+.container-price {
+    width: 100%;
+    background: @color-yellow;
+    height: 100px;
+    .container {
+        .centering();
+        .block {
+            display: table;
+            img {
+                display: inline-block;
+            }
+            .arrow {
+                margin-left: 15px;
+            }
+            .text_price_fregat {
+                display: inline-block;
+                color: #fff;
+                position: relative;
+                top: 30px;
+                left: 5px;
+                font-size: 22px;
+            }
+            .text_price_lobster {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 10px;
+                font-size: @fontsize-headings;
+                color: @color-mainTitle;
+                font-family: @fontLobster;
+            }
+        }
+    }
+}
+
+.container-aboutus {
+    width: 100%;
+    height: 590px;
+    position: relative;
+    .container {
+        .centering();
+        .aboutusText {
+            display: table;
+            width: 750px;
+            text-align: center;
+            z-index: 101;
+            h1 {
+                color: @color-headings;
+                font-size: @fontsize-headings;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    img {
+        position: absolute;
+        bottom: 0;
+        z-index: 99;
+    }
+    img.jug {
+        left: 0;
+    }
+    img.goat {
+        right: 0;
+    }
+}
+
+.container-WhyUs {
+    width: 100%;
+    height: 590px;
+    background: url(../img/backgroundWhyUs.jpg) no-repeat center;
+    background-size: cover;
+    .wrapper-WhyUs {
+        background-color: rgba(255, 255, 255, 0.3);
         width: 100%;
-        height: 500px;
-        background: url(/img/PatternCertificates.jpg);
-        text-align: center;
-        h1 {
-            background: #fff;
-            font-size: 24px;
-            font-weight: bold;
-            padding-left: 25px;
-            padding-right: 25px;
-            padding-bottom: 10px;
-            padding-top: 10px;
-            display: inline-block;
-            margin-top: 35px;
-            margin-bottom: 35px;
+        height: 100%;
+        .container {
+            .centering();
+            .WhyUs-text {
+                background: #fff;
+                outline: 3px solid @color-yellow;
+                outline-offset: -10px;
+                padding: 50px;
+                z-index: 100;
+                position: relative;
+                left: 85px;
+                h1 {
+                    font-family: @fontLobster;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-weight: bold;
+                    color: @color-text;
+                }
+            }
+            .bootle-img {
+                img {
+                    z-index: 0;
+                    display: block;
+                    position: relative;
+                    right: 105px;
+                }
+            }
         }
     }
+}
+
+.container-slider {
+    width: 100%;
+    min-height: 500px;
+    background: url(../img/PatternPaper.png) repeat;
+    .slider-wrapper {
+        .centering();
+        padding: 50px 0;
+        .img-wrapper {
+            background: #fff;
+            padding: 30px;
+            overflow: hidden;
+            float: left;
+            height: 400px;
+            width: 400px;
+            box-sizing: border-box;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .text-wrapper {
+            text-align: left;
+            float: right;
+            width: 330px;
+            h1 {
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: @fontsize-headings;
+                color: @color-headings;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    ol.carousel-indicators {
+        bottom: 0;
+        li {
+            background: #fff;
+        }
+        li.active {
+            background: @color-sliderElements;
+        }
+    }
+    .carousel-control {
+        background: transparent!important;
+        width: 10%;
+        .centering();
+        i {
+            color: @color-sliderElements;
+            text-shadow: none;
+            font-size: 30px;
+        }
+    }
+}
+
+.container-form {
+    width: 100%;
+    min-height: 500px;
+    background: @color-yellow;
+    font-size: @fontsize-chooseLitr;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .select {
+        .centering();
+        img.bottle {
+            margin-right: 25px;
+        }
+        input {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border: 0;
+            box-shadow: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        span.litr {
+            margin-right: 30px;
+        }
+        img.arrow {
+            transform: scale(-1, 1);
+            margin-bottom: 30px;
+            margin-right: 10px;
+        }
+        span.choose {
+            font-family: @fontLobster;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+    }
+    .wrapper-form {
+        .centering();
+        padding-top: 50px;
+        .forma {
+            width: 670px;
+            color: #fff;
+            input,
+            textarea {
+                width: 100%;
+                background-color: transparent;
+                border: 0;
+                border-bottom: 1px solid #fff;
+                outline: none;
+                padding: 3px 1px;
+                margin-bottom: 20px;
+                &::-webkit-input-placeholder {
+                    color: #fff;
+                }
+                &::-moz-placeholder {
+                    color: #fff;
+                }
+                &:-moz-placeholder {
+                    color: #fff;
+                }
+                &:-ms-input-placeholder {
+                    color: #fff;
+                }
+            }
+            textarea {
+                resize: vertical;
+            }
+            button {
+                .button-paddings(13px,
+                0);
+                display: inline-block;
+                width: 150px;
+                background-color: transparent;
+                border: 2px solid #fff;
+                float: right;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .note {
+        text-align: center;
+        color: #fff;
+        font-size: @fontsize-remark;
+        span {
+            color: #ff7200;
+        }
+    }
+}
+
+       
+    
     
     .container-footer {
         width: 100%;
@@ -391,3 +462,26 @@
             }
         }
     }
+        
+.container-certificates {
+    width: 100%;
+    min-height: 500px;
+    background: url(../img/PatternCertificates.jpg);
+    text-align: center;
+    h1 {
+        background: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        display: inline-block;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    .certificate {
+        .centering();
+    }
+}
+
