@@ -2,7 +2,7 @@
 @color-green: #80a71d; // переменная для объектов зеленого цвета
 @color-yellow: #d8d452; // переменная для объектов желтого цвета
 @color-tel: #8b8b8b; // цвет телефона 
-@color-mainTitle: #552404; // цвет основного заголвка
+@color-mainTitle: #552404; // цвет основного заголовка
 @color-headings: #2b2b2b; // цвет ВСЕХ заголовков
 @color-text: #555; // цвет текста
 @color-sliderElements: #a2a2a2; // цвет элемента слайдера
@@ -17,11 +17,11 @@
 @fontsize-certificate: 24px; // размер шрифта сертификата 
 @fontsize-chooseLitr: 20px; // размер шрифта на элементах выбора количества молока
 @fontsize-remark: 16px; // размер шрифта примечания
-@fontsize-developers: 12px;
+@fontsize-developers: 12px; // размер шрифта ссылки на портфолио
 @fontLobster: "Lobster",
-cursive;
+cursive; // шрифт главного заголовка
 @fontFregat: "Fregat",
-arial;
+arial; // шрифт основого текста
 .clearfix() {
     &:before,
     &:after {
@@ -62,6 +62,7 @@ body {
     color: @color-text;
 }
 
+//стили для верхнего меню//
 .container-tel {
     width: 100%;
     min-height: 45px;
@@ -120,6 +121,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+//стили для блока приветствия//
 .container-banner {
     width: 100%;
     height: 520px;
@@ -173,6 +175,7 @@ body {
     }
 }
 
+//стили для панели с ценой//
 .container-price {
     width: 100%;
     background: @color-yellow;
@@ -207,6 +210,7 @@ body {
     }
 }
 
+//стили для блока "О нас"//
 .container-aboutus {
     width: 100%;
     height: 590px;
@@ -239,6 +243,7 @@ body {
     }
 }
 
+//стили для блока "Почему мы?"//
 .container-WhyUs {
     width: 100%;
     height: 590px;
@@ -279,6 +284,7 @@ body {
     }
 }
 
+//стили для слайдера//
 .container-slider {
     width: 100%;
     min-height: 500px;
@@ -333,6 +339,7 @@ body {
     }
 }
 
+//стили для формы отправки//
 .container-form {
     width: 100%;
     min-height: 500px;
@@ -421,48 +428,47 @@ body {
     }
 }
 
-       
-    
-    
-    .container-footer {
-        width: 100%;
-        min-height: 125px;
-        background: @color-green;
-        font-weight: bold;
-        color: #fff;
-        .logo-footer {
-            img {
-                float: left;
-                margin-top: 20px;
-            }
-        }
-        .social-footer {
-            text-align: center;
+//стили для футера//       
+.container-footer {
+    width: 100%;
+    min-height: 125px;
+    background: @color-green;
+    font-weight: bold;
+    color: #fff;
+    .logo-footer {
+        img {
+            float: left;
             margin-top: 20px;
         }
-        .links-footer {
-            text-align: right;
-            span {
-                color: @color-text;
-            }
-            p {
-                font-size: 12px;
-                a {
-                    border-bottom: 1px solid #fff;
-                }
-            }
+    }
+    .social-footer {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .links-footer {
+        text-align: right;
+        span {
+            color: @color-text;
+        }
+        p {
+            font-size: 12px;
             a {
-                color: #fff;
-                text-decoration: none;
-            }
-            ul {
-                list-style: none;
-                margin-top: 20px;
-                margin-bottom: 0px;
+                border-bottom: 1px solid #fff;
             }
         }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
     }
-        
+}
+
+//стили для блока с сертификатами//
 .container-certificates {
     width: 100%;
     min-height: 500px;
@@ -484,4 +490,3 @@ body {
         .centering();
     }
 }
-
