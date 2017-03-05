@@ -55,6 +55,9 @@
     .links-footer ul {
         padding: 0 !important;
     }
+    .slider-wrapper {
+        display: block !important;
+    }
     .img-wrapper,
     .text-wrapper {
         margin: auto!important;
