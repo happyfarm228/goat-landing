@@ -1,8 +1,9 @@
 @import "fonts.css";
+@import "media.css";
 @color-green: #80a71d; // переменная для объектов зеленого цвета
 @color-yellow: #d8d452; // переменная для объектов желтого цвета
 @color-tel: #8b8b8b; // цвет телефона 
-@color-mainTitle: #552404; // цвет основного заголвка
+@color-mainTitle: #552404; // цвет основного заголовка
 @color-headings: #2b2b2b; // цвет ВСЕХ заголовков
 @color-text: #555; // цвет текста
 @color-sliderElements: #a2a2a2; // цвет элемента слайдера
@@ -17,11 +18,11 @@
 @fontsize-certificate: 24px; // размер шрифта сертификата 
 @fontsize-chooseLitr: 20px; // размер шрифта на элементах выбора количества молока
 @fontsize-remark: 16px; // размер шрифта примечания
-@fontsize-developers: 12px;
+@fontsize-developers: 12px; // размер шрифта ссылки на портфолио
 @fontLobster: "Lobster",
-cursive;
+cursive; // шрифт главного заголовка
 @fontFregat: "Fregat",
-arial;
+arial; // шрифт основого текста
 .clearfix() {
     &:before,
     &:after {
@@ -65,6 +66,7 @@ body {
     color: @color-text;
 }
 
+//стили для верхнего меню//
 .container-tel {
     width: 100%;
     min-height: 45px;
@@ -90,11 +92,11 @@ body {
         }
     }
     nav {
-        //        padding: 0;
+        box-shadow: none;
         ul {
             margin: 20px 0;
             li {
-                margin-left: 20px;
+                //                margin-left: 20px;
                 a {
                     color: #fff;
                     font-weight: bold;
@@ -119,6 +121,15 @@ body {
             }
         }
     }
+    .navbar-toggle {
+        border: 2px solid @color-yellow!important;
+        margin: 0;
+        margin-top: 30px;
+        margin-right: 15px;
+        .icon-bar {
+            background-color: @color-yellow!important;
+        }
+    }
 }
 
 .affix {
@@ -128,6 +139,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+//стили для блока приветствия//
 .container-banner {
     width: 100%;
     height: 520px;
@@ -190,10 +202,12 @@ body {
     }
 }
 
+//стили для панели с ценой//
 .container-price {
     width: 100%;
     background: @color-yellow;
     height: 100px;
+    display: table;
     a {
         display: block;
         width: 100%;
@@ -235,6 +249,7 @@ body {
     }
 }
 
+//стили для блока "О нас"//
 .container-aboutus {
     width: 100%;
     height: 590px;
@@ -243,7 +258,7 @@ body {
         .centering();
         .aboutusText {
             display: table;
-            width: 750px;
+            //            width: 750px;
             text-align: center;
             z-index: 101;
             h1 {
@@ -267,11 +282,13 @@ body {
     }
 }
 
+//стили для блока "Почему мы?"//
 .container-WhyUs {
     width: 100%;
     height: 590px;
     background: url(../img/backgroundWhyUs.jpg) no-repeat center;
     background-size: cover;
+    display: table;
     .wrapper-WhyUs {
         background-color: rgba(255, 255, 255, 0.3);
         width: 100%;
@@ -306,6 +323,7 @@ body {
     }
 }
 
+//стили для слайдера//
 .container-slider {
     width: 100%;
     min-height: 500px;
@@ -318,18 +336,15 @@ body {
             padding: 30px;
             overflow: hidden;
             float: left;
-            height: 400px;
-            width: 400px;
+            max-height: 400px;
+            max-width: 400px;
             box-sizing: border-box;
-            img {
-                max-width: 100%;
-                height: auto;
-            }
+            text-align: center;
         }
         .text-wrapper {
             text-align: left;
             float: right;
-            width: 330px;
+            max-width: 330px;
             h1 {
                 text-transform: uppercase;
                 font-weight: bold;
@@ -340,7 +355,7 @@ body {
         }
     }
     ol.carousel-indicators {
-        bottom: 0;
+        bottom: 0px;
         li {
             background: #fff;
         }
@@ -393,6 +408,7 @@ body {
     }
 }
 
+//стили для формы отправки//
 .container-form {
     width: 100%;
     min-height: 500px;
@@ -485,11 +501,13 @@ body {
     }
 }
 
+//стили для футера//       
 .container-footer {
     width: 100%;
     min-height: 125px;
     background: @color-green;
     color: #fff;
+    text-align: center;
     .logo-footer {
         img {
             float: left;
@@ -499,9 +517,6 @@ body {
     .social-footer {
         text-align: center;
         margin-top: 20px;
-        img {
-            margin: 0 5px;
-        }
     }
     .links-footer {
         text-align: right;
@@ -531,14 +546,6 @@ body {
             }
         }
     }
-}
-
-.blur_active {
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
 }
 
 .popup-success {
@@ -578,4 +585,12 @@ body {
             margin-top: 20px;
         }
     }
+}
+
+.blur_active {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
 }
