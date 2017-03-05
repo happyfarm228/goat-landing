@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -19,9 +19,9 @@
     <![endif]-->
 </head>
 
-<body>
-    <div class="popup-success">
-        <i class="fa fa-times" aria-hidden="true"></i>
+<body data-spy="scroll">
+    <div class="popup-success" style="display: none;">
+        <i class="fa fa-times closeSuccess" aria-hidden="true"></i>
         <div class="popup-inner">
             <img src="img/goatBrown.png" alt="">
             <p>Ваш заказ принят!</p>
@@ -54,11 +54,11 @@
                 <div class="for-xs-size">
                     <nav class="collapse navbar-collapse pull-right" id="bs-navbar">
                         <ul class="nav navbar-nav" role="tablist">
-                            <li><a href="#linkto" data-toggle="tab">О нас</a></li>
-                            <li><a href="#linkto" data-toggle="tab">Продукция</a></li>
-                            <li><a href="#linkto" data-toggle="tab">Почему мы?</a></li>
-                            <li><a href="#linkto" data-toggle="tab">Сертификаты</a></li>
-                            <li><a href="#linkto" class="btn-call">Заказать</a></li>
+                            <li><a href="#aboutus" class="linkto" data-toggle="tab">О нас</a></li>
+                            <li><a href="#product" class="linkto" data-toggle="tab">Продукция</a></li>
+                            <li><a href="#whyus" class="linkto" data-toggle="tab">Почему мы?</a></li>
+                            <li><a href="#certif" class="linkto" data-toggle="tab">Сертификаты</a></li>
+                            <li><a href="#order" class="btn-call linkto">Заказать</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -69,14 +69,14 @@
                 <div class="mainTitle">
                     <h1>Козье молоко</h1>
                     <h2>полезное, вкусное, родное</h2>
-                    <a href="#" class="order">Заказать</a>
-                    <a href="#" class="more">Подробнее</a>
+                    <a href="#order" class="order linkto">Заказать</a>
+                    <a href="#aboutus" class="more linkto">Подробнее</a>
                 </div>
             </div>
             <img src="img/MilkWave.png" alt="">
         </div>
         <div class="container-price">
-            <a href="">
+            <a href="#order" class="linkto">
                 <div class="container">
                     <div class="block">
                         <img src="img/Bottle.png" class="img-responsive" alt="Бутылка молока">
@@ -87,7 +87,7 @@
                 </div>
             </a>
         </div>
-        <div class="container-aboutus">
+        <div class="container-aboutus" id="aboutus">
             <div class="container">
                 <div class="aboutusText">
                     <h1>Добро пожаловать на ферму козьего молока</h1>
@@ -98,10 +98,10 @@
                         <br> хотим, чтобы Вы оставались всегда довольны.</p>
                 </div>
             </div>
-            <img src="img/Jug.png" alt="" class="jug hidden-xs">
-            <img src="img/Goat.png" alt="" class="goat hidden-xs">
+            <img src="img/Jug.png" alt="" class="jug hidden-xs wow fadeInLeft">
+            <img src="img/Goat.png" alt="" class="goat hidden-xs wow fadeInRight">
         </div>
-        <div class="container-slider">
+        <div class="container-slider" id="product">
             <div class="container">
                 <div id="slider" class="carousel slide" data-ride="carousel" data-interval="false">
                     <!-- Indicators -->
@@ -176,7 +176,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-WhyUs">
+        <div class="container-WhyUs" id="whyus">
             <div class="wrapper-WhyUs">
                 <div class="container">
                     <div class="col-md-7 col-sm-12 WhyUs-text">
@@ -189,7 +189,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-certificates">
+        <div class="container-certificates" id="certif">
             <div class="container">
                 <div class="col-md-12">
                     <h1>Наша продукция соответствует всем необходимым стандартам</h1>
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-form">
+        <div class="container-form" id="order">
             <div class="container">
                 <form id="">
                     <div class="col-md-12">
@@ -232,7 +232,7 @@
                                 <textarea placeholder="Ваши пожелания" name="notes" rows="2"></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <button>Заказать</button>
+                                <button id="btn-order">Заказать</button>
                             </div>
                         </div>
                     </div>
@@ -251,7 +251,7 @@
                         <img src="img/Logo.png" alt="">
                     </a>
                 </div>
-                <div class="col-sm-4 col-xs-12 social-footer">
+                <div class="col-sm-4 col-xs-12 social-footer wow bounceInDown">
                     <p>Добавляйтесь к нам в друзья!</p>
                     <a href=""><img src="img/VK.png"></a>
                     <a href=""><img src="img/OK.png"></a>
