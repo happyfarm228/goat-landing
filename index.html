@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
-    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +48,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand col-md-12 col-xs-9" href="#">
-                        <img src="img/logo.png" alt="logo" class="responsive-img">
+                        <img src="img/Logo.png" alt="logo" class="responsive-img">
                     </a>
                 </div>
                 <div class="for-xs-size">
@@ -78,7 +78,7 @@
         <div class="container-price">
             <a href="#order" class="linkto">
                 <div class="container">
-                    <div class="block">
+                    <div class="block wow tada" data-wow-delay="0.6s">
                         <img src="img/Bottle.png" class="img-responsive" alt="Бутылка молока">
                         <span class="text_price_fregat">1 литр </span>
                         <img class="arrow hidden-xs" src="img/Arrow.png" alt="">
@@ -98,14 +98,14 @@
                         <br> хотим, чтобы Вы оставались всегда довольны.</p>
                 </div>
             </div>
-            <img src="img/Jug.png" alt="" class="jug hidden-xs wow fadeInLeft">
-            <img src="img/Goat.png" alt="" class="goat hidden-xs wow fadeInRight">
+            <img src="img/jug.png" alt="" class="jug hidden-xs">
+            <img src="img/Goat.png" alt="" class="goat hidden-xs">
         </div>
         <div class="container-slider" id="product">
             <div class="container">
-                <div id="slider" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div id="slider" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
-                    <ol class="carousel-indicators hidden-xs">
+                    <ol class="carousel-indicators">
                         <li data-target="#slider" data-slide-to="0" class="active"></li>
                         <li data-target="#slider" data-slide-to="1"></li>
                         <li data-target="#slider" data-slide-to="2"></li>
@@ -210,7 +210,7 @@
                 <form id="">
                     <div class="col-md-12">
                         <div class="select">
-                            <img src="img/Bottle.png" class="bottle" alt="">
+                            <img src="img/Bottle.png" class="bottle wow shake" alt="">
                             <input type="text" placeholder="1" name="quantity">
                             <span class="litr">л.</span>
                             <img src="img/Arrow.png" class="arrow hidden-xs" alt="">
