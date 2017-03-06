@@ -1,3 +1,4 @@
+$(document).ready(function() {
 //init wow.min.js
 new WOW().init();
 
@@ -22,4 +23,6 @@ $("#btn-order").on("click", function(){
             $(".popup-success").hide();
         });
     }
+});
+    
 });
