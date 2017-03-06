@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
     <div class="popup-success">
         <i class="fa fa-times" aria-hidden="true"></i>
         <div class="popup-inner">
@@ -195,13 +196,13 @@
                     <h1>Наша продукция соответствует всем необходимым стандартам</h1>
                 </div>
                 <div class="col-md-4 col-xs-12 certificate">
-                    <img src="img/certificate.jpg" width="200" height="300" alt="">
+                    <img src="img/certificate.jpg" width="200" height="300" alt="" data-toggle="modal" data-target="#certificatesModal">
                 </div>
                 <div class="col-md-4 col-xs-12 certificate">
-                    <img src="img/certificate.jpg" width="200" height="300" alt="">
+                    <img src="img/certificate.jpg" width="200" height="300" alt="" data-toggle="modal" data-target="#certificatesModal">
                 </div>
                 <div class="col-md-4 col-xs-12 certificate">
-                    <img src="img/certificate.jpg" width="200" height="300" alt="">
+                    <img src="img/certificate.jpg" width="200" height="300" alt="" data-toggle="modal" data-target="#certificatesModal">
                 </div>
             </div>
         </div>
@@ -268,7 +269,18 @@
                 </div>
             </div>
         </div>
+        <div class="modal" id="certificatesModal" tabindex="-1" role="dialog" aria-labelledby="startModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <img src="img/certificate.jpg" width="590" height="700" alt="">
+                </div>
+            </div>
+        </div>
     </div>
+
 
 
     <script src="js/jquery.min.js"></script>
