@@ -81,4 +81,8 @@
     .mainTitle {
         margin-top: 0!important;
     }
+    .popup-success i {
+        right: 50px!important;
+        font-size: 30px!important;
+    }
 }
