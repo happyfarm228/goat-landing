@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Козье молоко - elFerma</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -210,7 +210,7 @@
                     <div class="col-md-12">
                         <div class="select">
                             <img src="img/Bottle.png" class="bottle wow shake" alt="">
-                            <input type="text" placeholder="1" name="quantity" class="error_inp">
+                            <input type="text" placeholder="1" name="quantity" id="litr" class="error_inp">
                             <span class="litr">л.</span>
                             <img src="img/Arrow.png" class="arrow hidden-xs" alt="">
                             <span class="choose hidden-xs">Выберете кол-во литров</span>
@@ -231,7 +231,8 @@
                                 <textarea placeholder="Ваши пожелания" name="notes" rows="2"></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <button id="btn-order">Заказать</button>
+                                <div class="col-md-6 itog">Стоимость: <span id="cost"></span> руб.</div>
+                               <div class="col-md-6 itogButton"><button id="btn-order">Заказать</button></div>
                             </div>
                         </div>
                     </div>

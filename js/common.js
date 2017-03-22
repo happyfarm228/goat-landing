@@ -13,20 +13,6 @@ $(document).ready(function () {
         }, 700);
     });
 
-    //popup ordered
-    //    $("#btn-order").on("click", function () {
-    //        if ($(".popup-success").is(":hidden")) {
-    //            $(".blur-all").addClass("blur_active");
-    //            $(".popup-success").show(200);
-    //        }
-    //        if ($(".popup-success").is(":visible")) {
-    //            $(".closeSuccess").on("click", function () {
-    //                $(".blur-all").removeClass("blur_active");
-    //                $(".popup-success").hide();
-    //            });
-    //        }
-    //    });
-
     //form validator
     $("#sendOrder").validate({
         rules: {
@@ -58,6 +44,7 @@ $(document).ready(function () {
                 success: function () {
                     $("#sendOrder").fadeTo(function () {
                         this.reset();
+                        $('.itog').css('visibility', 'hidden');
                         $(".blur-all").addClass("blur_active");
                         $(".popup-success").show(200);
                         $(".closeSuccess").on("click", function () {
@@ -68,6 +55,16 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+    
+    //Display coast
+    var cost = 200;
+    var amount, itog = 0;
+    $('#litr').on('keyup', function() {
+        amount = $('#litr').val();
+        itog = +amount * cost;
+        $('.itog').css('visibility', 'visible');
+        $('#cost').text(itog);        
     });
 
 });
