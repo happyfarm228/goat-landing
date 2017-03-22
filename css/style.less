@@ -66,12 +66,19 @@ body {
     color: @color-text;
 }
 
+.container-slider,
+.container-certificates,
+.container-form {
+    padding-top: 95px!important;
+}
+
 //стили для верхнего меню//
 .container-tel {
     width: 100%;
     min-height: 45px;
     background-color: #fff;
     line-height: 45px;
+    vertical-align: middle;
     text-align: left;
     color: @color-tel;
     a {
@@ -124,8 +131,8 @@ body {
             }
         }
         & .active a {
-                color: #ffff5c!important;
-            }
+            color: #ffff5c!important;
+        }
     }
     .navbar-toggle {
         border: 2px solid @color-yellow!important;
@@ -205,6 +212,7 @@ body {
         bottom: 0;
         left: 0;
         z-index: 99;
+        width: 100%;
     }
 }
 
@@ -291,7 +299,7 @@ body {
 //стили для блока "Почему мы?"//
 .container-WhyUs {
     width: 100%;
-    height: 590px;
+    height: 680px;
     background: url(../img/backgroundWhyUs.jpg) no-repeat center;
     background-size: cover;
     display: table;
@@ -332,7 +340,7 @@ body {
 //стили для слайдера//
 .container-slider {
     width: 100%;
-    min-height: 500px;
+    min-height: 590px;
     background: url(../img/PatternPaper.png) repeat;
     .slider-wrapper {
         .centering();
@@ -383,7 +391,7 @@ body {
 
 .container-certificates {
     width: 100%;
-    min-height: 500px;
+    min-height: 590px;
     background: url(../img/PatternCertificates.jpg);
     text-align: center;
     h1 {
@@ -428,13 +436,14 @@ body {
             margin-right: 25px;
         }
         input {
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             text-align: center;
-            border: 0;
+            border: 2px solid #fff;
             box-shadow: none;
             border-radius: 5px;
             margin-right: 10px;
+            outline: none;
         }
         span.litr {
             margin-right: 30px;
@@ -459,12 +468,16 @@ body {
             input,
             textarea {
                 width: 100%;
+                //                height: 40px;
                 background-color: transparent;
                 border: 0;
+                border-radius: 0;
+                -webkit-appearance: none;
                 border-bottom: 1px solid #fff;
                 outline: none;
                 padding: 3px 1px;
                 margin-bottom: 20px;
+                //                -webkit-user-select: none;
                 &::-webkit-input-placeholder {
                     color: #fff;
                 }
@@ -504,6 +517,20 @@ body {
         span {
             color: #ff7200;
         }
+    }
+    input.error {
+        border-color: #A60000!important;
+        margin-bottom: 0 !important;
+    }
+    label.error {
+        font-size: 12px !important;
+        color: #A60000!important;
+        margin-bottom: 10px;
+    }
+    label#quantity-error {
+        position: relative;
+        top: 40px;
+        right: 47px;
     }
 }
 
@@ -600,3 +627,6 @@ body {
     filter: blur(5px);
 }
 
+.has-error .help-block {
+    display: none !important;
+}

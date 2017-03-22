@@ -75,6 +75,12 @@
     .text-wrapper h1 {
         font-size: 20px !important;
     }
+    .goat, .jug {
+        opacity: 0.4;
+    }
+    .saf {
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width: 447px) {
