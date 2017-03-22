@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+    <title>Козье молоко - elFerma</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -30,14 +30,14 @@
     <div class="blur-all">
         <div class="container-tel">
             <div class="container">
-                <div class="col-sm-6 col-xs-12 tel-arg">
+                <div class="col-md-6 col-sm-12 col-xs-12 tel-arg">
                     <i class="fa fa-map-marker" aria-hidden="true"></i> г. Санкт-Петербург
                 </div>
-                <div class="col-sm-6 col-xs-12 tel-arg"><a href="tel:+79999999999">+7 999 999-99-99</a></div>
+                <div class="col-md-6 col-sm-12 col-xs-12 tel-arg"><a href="tel:+79999999999">+7 999 999-99-99</a></div>
 
             </div>
         </div>
-        <div class="container-menu" data-spy="affix" data-offset-top="1">
+        <div class="container-menu" data-spy="affix" id="topMenu" data-offset-top="1">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-expanded="false">
@@ -97,12 +97,12 @@
                         <br> хотим, чтобы Вы оставались всегда довольны.</p>
                 </div>
             </div>
-            <img src="img/jug.png" alt="" class="jug hidden-xs">
+            <img src="img/Jug.png" alt="" class="jug hidden-xs">
             <img src="img/Goat.png" alt="" class="goat hidden-xs">
         </div>
         <div class="container-slider" id="product">
             <div class="container">
-                <div id="slider" class="carousel slide" data-ride="carousel">
+                <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -114,12 +114,12 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="slider-wrapper">
-                                <div class="col-sm-5 col-xs-12">
+                                <div class="col-md-5 col-sm-12 col-xs-12">
                                     <div class="img-wrapper">
                                         <img src="img/Mother.jpg" class="img-responsive" alt="">
                                     </div>
                                 </div>
-                                <div class="col-sm-4 col-xs-12 wrapIT">
+                                <div class="col-md-4 col-sm-12 col-xs-12 wrapIT">
                                     <div class="text-wrapper">
                                         <h1>Для мамы и малыша</h1>
                                         <p>
@@ -131,12 +131,12 @@
                         </div>
                         <div class="item">
                             <div class="slider-wrapper">
-                                <div class="col-sm-5 col-xs-12">
+                                <div class="col-md-5 col-sm-12 col-xs-12">
                                     <div class="img-wrapper">
                                         <img src="img/Sport.jpg" class="img-responsive" alt="">
                                     </div>
                                 </div>
-                                <div class="col-sm-4 col-xs-12 wrapIT">
+                                <div class="col-md-4 col-sm-12 col-xs-12 wrapIT">
                                     <div class="text-wrapper">
                                         <h1>Диетический продукт</h1>
                                         <p>
@@ -148,12 +148,12 @@
                         </div>
                         <div class="item">
                             <div class="slider-wrapper">
-                                <div class="col-sm-5 col-xs-12">
+                                <div class="col-md-5 col-sm-12 col-xs-12">
                                     <div class="img-wrapper">
                                         <img src="img/Allergic.jpg" class="img-responsive" alt="">
                                     </div>
                                 </div>
-                                <div class="col-sm-4 col-xs-12 wrapIT">
+                                <div class="col-md-4 col-sm-12 col-xs-12 wrapIT">
                                     <div class="text-wrapper">
                                         <h1>Гипоалергенно</h1>
                                         <p>
@@ -206,11 +206,11 @@
         </div>
         <div class="container-form" id="order">
             <div class="container">
-                <form id="">
+                <form id="sendOrder">
                     <div class="col-md-12">
                         <div class="select">
                             <img src="img/Bottle.png" class="bottle wow shake" alt="">
-                            <input type="text" placeholder="1" name="quantity">
+                            <input type="text" placeholder="1" name="quantity" id="litr" class="error_inp">
                             <span class="litr">л.</span>
                             <img src="img/Arrow.png" class="arrow hidden-xs" alt="">
                             <span class="choose hidden-xs">Выберете кол-во литров</span>
@@ -218,20 +218,21 @@
                     </div>
                     <div class="col-md-12 wrapper-form">
                         <div class="forma">
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input type="text" placeholder="Ваше имя" name="name">
+                            <div class="form-group col-md-6 saf">
+                                <input type="text" placeholder="Ваше имя" id="name" name="name" class="error_inp">
                             </div>
-                            <div class="form-group col-md-6 col-xs-12">
-                                <input type="text" placeholder="Ваш телефон" name="tel">
+                            <div class="form-group col-md-6 saf">
+                                <input type="text" placeholder="Ваш телефон" id="tel" name="tel" class="error_inp">
                             </div>
                             <div class="form-group col-md-12">
-                                <input type="text" placeholder="Адрес доставки" name="address">
+                                <input type="text" placeholder="Адрес доставки" id="address" name="address" class="error_inp">
                             </div>
                             <div class="form-group col-md-12">
                                 <textarea placeholder="Ваши пожелания" name="notes" rows="2"></textarea>
                             </div>
                             <div class="form-group col-md-12">
-                                <button id="btn-order">Заказать</button>
+                                <div class="col-md-6 itog">Стоимость: <span id="cost"></span> руб.</div>
+                               <div class="col-md-6 itogButton"><button id="btn-order">Заказать</button></div>
                             </div>
                         </div>
                     </div>
@@ -284,6 +285,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <!--    common.js is the last script !IMPORTANT-->
     <script src="js/common.js"></script>
 </body>
