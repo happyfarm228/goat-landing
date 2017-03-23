@@ -61,8 +61,12 @@ $(document).ready(function () {
     var cost = 200;
     var amount, itog = 0;
     $('#litr').on('keyup', function() {
-        amount = $('#litr').val();
-        itog = +amount * cost;
+        if($.isNumeric($('#litr').val())){
+            amount = $('#litr').val();
+            itog = +amount * cost;
+        }else {
+            itog = 0;
+        }
         $('.itog').css('visibility', 'visible');
         $('#cost').text(itog);        
     });

@@ -1,5 +1,5 @@
 <?php
-    $to = 'elfermaorder@gmail.com';
+    $to = 'elferma@bk.ru';
     $subject = '$$$ Новый ЗАКАЗ! $$$';
     $itogCost = $_POST['quantity']*200;
     $message = '
