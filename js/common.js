@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    //preloader
+    if ($('.preloader').length) {
+        $('.preloader').delay(3000).fadeOut(300);
+    }
+
     //init wow.min.js
     new WOW().init();
 
@@ -6,7 +11,7 @@ $(document).ready(function () {
     $('.linkto').click(function () {
         var link = $(this).attr('href');
         var menuPos = $('#topMenu').position().top;
-        var posi = $(link).offset().top-menuPos*2;
+        var posi = $(link).offset().top - menuPos * 2;
         console.log(posi);
         $('body,html').animate({
             scrollTop: posi
@@ -56,19 +61,19 @@ $(document).ready(function () {
             });
         }
     });
-    
+
     //Display coast
     var cost = 200;
     var amount, itog = 0;
-    $('#litr').on('keyup', function() {
-        if($.isNumeric($('#litr').val())){
+    $('#litr').on('keyup', function () {
+        if ($.isNumeric($('#litr').val())) {
             amount = $('#litr').val();
             itog = +amount * cost;
-        }else {
+        } else {
             itog = 0;
         }
         $('.itog').css('visibility', 'visible');
-        $('#cost').text(itog);        
+        $('#cost').text(itog);
     });
 
 });

@@ -510,7 +510,8 @@ body {
                     background-color: rgba(255, 255, 255, .3);
                 }
             }
-            .itog, .itogButton {
+            .itog,
+            .itogButton {
                 padding: 0 !important;
             }
             .itog {
@@ -599,7 +600,7 @@ body {
     left: 0;
     background: rgba(255, 255, 255, .7);
     text-align: center;
-    z-index: 9999;
+    z-index: 9000;
     .centering();
     i {
         position: absolute;
@@ -637,6 +638,25 @@ body {
     filter: blur(5px);
 }
 
-.has-error .help-block {
-    display: none !important;
+.preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #fff;
+    .loading {
+//        width: 40px;
+//        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        background: url(../img/load.png) center no-repeat;
+        -webkit-animation: rotateIn 1.0s infinite ease-in-out;
+        animation: rotateIn 1.0s infinite ease-in-out;
+    }
 }
