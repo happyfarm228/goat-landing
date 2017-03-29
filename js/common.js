@@ -17,6 +17,9 @@ $(document).ready(function () {
             scrollTop: posi
         }, 700);
     });
+    
+    //telephone mask
+    $("#tel").mask("+7 (999) 999-9999");
 
     //form validator
     $("#sendOrder").validate({

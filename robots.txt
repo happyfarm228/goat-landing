@@ -1,0 +1,6 @@
+User-agent: Yandex
+Host: http://fermify.ru/
+
+User-agent: Googlebot
+
+Sitemap: http://fermify.ru/sitemap.xml
