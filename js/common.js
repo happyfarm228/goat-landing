@@ -1,7 +1,7 @@
 $(document).ready(function () {
     //preloader
     if ($('.preloader').length) {
-        $('.preloader').delay(3000).fadeOut(300);
+        $('.preloader').delay(2000).fadeOut(300);
     }
 
     //init wow.min.js
@@ -17,7 +17,7 @@ $(document).ready(function () {
             scrollTop: posi
         }, 700);
     });
-    
+
     //telephone mask
     $("#tel").mask("+7 (999) 999-9999");
 
@@ -27,7 +27,9 @@ $(document).ready(function () {
             quantity: {
                 required: true,
                 number: true,
-                min: 1
+                min: 1,
+                max: 10,
+                step: 1
             },
             name: "required",
             tel: "required",
@@ -35,9 +37,11 @@ $(document).ready(function () {
         },
         messages: {
             quantity: {
-                required: "",
-                number: "",
-                min: ""
+                required: "Введите количество литров",
+                number: "Введите ЧИСЛО литров",
+                min: "Минимум 1 литр",
+                max: "Максимум 10 литров",
+                step: "Введите целое число литров (1,2,3,..)"
             },
             name: "Введите Ваше имя",
             tel: "Введите Ваш телефон",
@@ -66,7 +70,7 @@ $(document).ready(function () {
     });
 
     //Display coast
-    var cost = 200;
+    var cost = 250;
     var amount, itog = 0;
     $('#litr').on('keyup', function () {
         if ($.isNumeric($('#litr').val())) {

@@ -1,7 +1,7 @@
 <?php
-    $to = 'fermify@gmail.com';
+    $to = 'order@fermifi.ru';
     $subject = '$$$ Новый ЗАКАЗ! $$$';
-    $itogCost = $_POST['quantity']*200;
+    $itogCost = $_POST['quantity']*250;
     $message = '
             <html>
                 <head>
@@ -17,6 +17,6 @@
                 </body>
             </html>';
     $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-    $headers .= "From: Отправитель <goat@milk.com>\r\n";
+    $headers .= "From: Фермифи <goat@milk.com>\r\n";
     mail($to, $subject, $message, $headers);
 ?>

@@ -99,7 +99,7 @@ body {
 .container-banner {
   width: 100%;
   height: 520px;
-  background: url("../img/Banner.png") no-repeat center center;
+  background: url("../img/Banner.jpg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -191,7 +191,7 @@ body {
   display: block;
   color: #552404;
   width: 100%;
-  height: 100%;
+  height: 100px;
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
@@ -254,7 +254,7 @@ body {
   text-align: center;
   z-index: 101;
 }
-.container-aboutus .container .aboutusText h1 {
+.container-aboutus .container .aboutusText h2 {
   color: #2b2b2b;
   font-size: 30px;
   font-weight: bold;
@@ -281,7 +281,7 @@ body {
 .container-WhyUs .wrapper-WhyUs {
   background-color: rgba(255, 255, 255, 0.3);
   width: 100%;
-  height: 100%;
+  height: 680px;
 }
 .container-WhyUs .wrapper-WhyUs .container {
   height: 100%;
@@ -302,7 +302,7 @@ body {
   position: relative;
   left: 85px;
 }
-.container-WhyUs .wrapper-WhyUs .container .WhyUs-text h1 {
+.container-WhyUs .wrapper-WhyUs .container .WhyUs-text h2 {
   font-family: "Lobster", cursive;
   text-transform: uppercase;
 }
@@ -346,12 +346,13 @@ body {
   float: right;
   max-width: 330px;
 }
-.container-slider .slider-wrapper .text-wrapper h1 {
+.container-slider .slider-wrapper .text-wrapper h3 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 30px;
   color: #2b2b2b;
   margin-bottom: 20px;
+  font-size: 30px !important;
 }
 .container-slider ol.carousel-indicators {
   bottom: 0px;
@@ -385,7 +386,7 @@ body {
   background: url(../img/PatternCertificates.jpg);
   text-align: center;
 }
-.container-certificates h1 {
+.container-certificates h2 {
   background: #fff;
   font-size: 24px;
   font-weight: bold;
@@ -461,6 +462,9 @@ body {
   font-family: "Lobster", cursive;
   color: #fff;
   letter-spacing: 1.5px;
+}
+.container-form .litrlabel {
+  text-align: center;
 }
 .container-form .wrapper-form {
   height: 100%;
