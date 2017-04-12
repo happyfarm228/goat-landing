@@ -68,7 +68,8 @@ body {
 
 .container-slider,
 .container-certificates,
-.container-form {
+.container-form,
+.container-product {
     padding-top: 95px!important;
 }
 
@@ -295,6 +296,27 @@ body {
     }
     img.goat {
         right: 0;
+    }
+}
+
+//стили для блока "Продукция"
+.container-product {
+    width: 100%;
+    display: table;
+    height: 500px;
+    background: url(../img/flowers.png) repeat-x bottom;
+    -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.1);
+    .product-img {
+        text-align: center;
+    }
+    .product-text {
+        text-align: left;
+        hr {
+            width: 150px;
+            border-top: 1px solid #80a71d;
+        }
     }
 }
 

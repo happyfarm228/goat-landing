@@ -81,6 +81,12 @@
     .saf {
         width: 100% !important;
     }
+    .container-product {
+        background: #fff!important;
+    }
+    .container-product .product-text {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 447px) {

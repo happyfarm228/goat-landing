@@ -12,7 +12,8 @@ body {
 }
 .container-slider,
 .container-certificates,
-.container-form {
+.container-form,
+.container-product {
   padding-top: 95px!important;
 }
 .container-tel {
@@ -270,6 +271,25 @@ body {
 }
 .container-aboutus img.goat {
   right: 0;
+}
+.container-product {
+  width: 100%;
+  display: table;
+  height: 500px;
+  background: url(../img/flowers.png) repeat-x bottom;
+  -webkit-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.container-product .product-img {
+  text-align: center;
+}
+.container-product .product-text {
+  text-align: left;
+}
+.container-product .product-text hr {
+  width: 150px;
+  border-top: 1px solid #80a71d;
 }
 .container-WhyUs {
   width: 100%;
